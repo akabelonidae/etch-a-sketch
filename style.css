@@ -17,23 +17,24 @@ body {
   gap: 5rem;
 }
 #title {
-  font-size: 5rem;
+  font-size: 6rem;
   text-align: center;
 }
 #grid {
   display: inline-flex;
   flex-wrap: wrap;
-  height: 400px;
-  width: 400px;
+  height: 960px;
+  width: 960px;
 }
 .gridPieces {
-  width: 25px;
-  height: 25px;
+  width: 60px;
+  height: 60px;
   background-color: white;
+  border: 1px solid black;
 }
 #clear {
-  padding: 1rem;
+  padding: 2rem;
   font-size: 3rem;
-  background-color: #e5e37b;
+  background-color: #white;
   border: 5px solid black;
 }
