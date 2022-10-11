@@ -1,6 +1,8 @@
 'use strict';
+
 const grid = document.querySelector('#grid');
 
+// Create grid
 const createGrid = function () {
   for (let i = 0; i < 256; i++) {
     const gridFillers = document.createElement('div');
@@ -9,9 +11,13 @@ const createGrid = function () {
 
     gridFillers.addEventListener('mouseover', function () {
       gridFillers.style.backgroundColor = 'black';
-      document.querySelector('#clear').addEventListener('click', function () {
-        gridFillers.style.backgroundColor = 'white';
-      });
+
+      // Clear button
+      document
+        .querySelector('.clear-btn')
+        .addEventListener('click', function () {
+          gridFillers.style.backgroundColor = 'white';
+        });
     });
   }
 };
