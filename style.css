@@ -21,14 +21,19 @@ body {
   text-align: center;
 }
 #grid {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  height: 480px;
-  width: 480px;
-  background-color: rgba(0, 10, 0, 0.1);
+  height: 400px;
+  width: 400px;
 }
 .gridPieces {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: white;
+}
+#clear {
+  padding: 1rem;
+  font-size: 3rem;
+  background-color: #e5e37b;
+  border: 5px solid black;
 }
