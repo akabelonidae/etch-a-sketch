@@ -1,5 +1,4 @@
 'use strict';
-
 const grid = document.querySelector('#grid');
 
 // Create grid
@@ -10,7 +9,8 @@ const createGrid = function () {
     grid.appendChild(gridFillers);
 
     gridFillers.addEventListener('mouseover', function () {
-      gridFillers.style.backgroundColor = 'black';
+      gridFillers.style.backgroundColor =
+        document.querySelector('#color-picker').value;
 
       // Clear button
       document

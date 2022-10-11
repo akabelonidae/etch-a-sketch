@@ -11,10 +11,15 @@
     <div id="container">
       <h1 id="title">Etch a sketch!</h1>
       <div id="grid"></div>
-      <div class="btn-group">
-        <button class="btn clear-btn">Clear</button>
-        <button class="btn color-btn">Color palette</button>
-        <button class="btn rgb-btn">Switch to RGB</button>
+
+      <!-- Lower menu(btns and color picker) -->
+      <div id="lower-menu-main">
+        <div id="lower-menu-headline">Pick a color!</div>
+        <div id="lower-menu-btns">
+          <button class="btn clear-btn">Clear</button>
+          <input type="color" id="color-picker" />
+          <button class="btn rgb-btn">Switch to RGB</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
