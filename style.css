@@ -67,8 +67,7 @@ body {
 #color-picker:hover {
   transform: scale(1.2);
 }
-.rgb-btn:hover {
-  transform: scale(1.1);
+.rainbowMode {
   font-size: 2.5rem;
   color: white;
   background: linear-gradient(
