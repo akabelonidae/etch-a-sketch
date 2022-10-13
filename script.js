@@ -11,14 +11,17 @@ const createGrid = function (gridCount) {
   for (let i = 0; i < gridCount * gridCount; i++) {
     const newGridElements = document.createElement('div');
     newGridElements.classList.add('newGrids');
-    newGridElements.style.height = `${960 / gridCount}px`;
-    newGridElements.style.width = `${960 / gridCount}px`;
+    newGridElements.style.height = `${750 / gridCount}px`;
+    newGridElements.style.width = `${750 / gridCount}px`;
     grid.appendChild(newGridElements);
   }
 };
 
 // Grid x Grid slider
 gridSlider.addEventListener('click', function () {
+  rainbowMode = 0;
+  rainbowBtn.classList.remove('rainbowMode');
+
   const gridsAll = document.querySelectorAll('.newGrids');
   gridsAll.forEach((div) => div.remove());
 
@@ -30,7 +33,7 @@ gridSlider.addEventListener('click', function () {
   ).textContent = `${gridSlider.value}x${gridSlider.value}`;
 });
 
-// Grid color function
+// Change grid color
 const gridColor = function () {
   const gridsAll = document.querySelectorAll('.newGrids');
 
@@ -41,7 +44,7 @@ const gridColor = function () {
   );
 };
 
-// Rainbow colors
+// Rainbow effect
 const rainbowColors = function () {
   const gridsAll = document.querySelectorAll('.newGrids');
 
