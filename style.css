@@ -28,8 +28,8 @@ body {
 #grid {
   display: flex;
   flex-wrap: wrap;
-  height: 750px;
-  width: 750px;
+  height: 700px;
+  width: 700px;
 }
 .newGrids {
   display: flex;
@@ -45,9 +45,11 @@ body {
   text-align: center;
 }
 #grid-slider {
-  width: 250%;
+  width: 200%;
 }
 #slider-text {
+  margin-top: 1rem;
+
   font-size: 2.5rem;
 }
 #lower-menu-main {
