@@ -59,7 +59,7 @@ body {
 #lower-menu-headline {
   font-size: 2rem;
 }
-.clear-btn:hover {
+.btn:hover {
   transform: scale(1.1);
   color: white;
   background-color: black;
@@ -71,7 +71,7 @@ body {
   font-size: 2.5rem;
   color: white;
   background: linear-gradient(
-    45deg,
+    135deg,
     violet,
     indigo,
     blue,
