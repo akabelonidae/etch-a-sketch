@@ -12,14 +12,20 @@
       <h1 id="title">Etch a sketch!</h1>
       <div id="grid"></div>
 
-      <!-- Lower menu(btns and color picker) -->
+      <!-- Grid slider -->
+      <div id="slider-div">
+        <div id="slider-text">16x16</div>
+
+        <input type="range" id="grid-slider" min="16" max="64" value="16" />
+      </div>
+
+      <!-- Lower menu(buttons and color picker) -->
       <div id="lower-menu-main">
-        <div id="lower-menu-headline">Current color!</div>
+        <div id="lower-menu-headline">Current Color:</div>
         <div id="lower-menu-btns">
           <input type="color" id="color-picker" />
-
           <button class="btn clear-btn">Clear</button>
-          <button class="btn rgb-btn">Switch to RGB</button>
+          <button class="btn rgb-btn">Rainbow Mode!</button>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 8rem;
-  gap: 6rem;
+  gap: 2rem;
 }
 #title {
   font-size: 8rem;
@@ -25,11 +25,23 @@ body {
   height: 960px;
   width: 960px;
 }
-.gridFill {
-  width: 60px;
-  height: 60px;
+.newGrids {
+  display: flex;
+  flex-wrap: wrap;
   background-color: white;
-  border: 1px solid black;
+}
+#slider-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#grid-slider {
+  width: 250%;
+}
+#slider-text {
+  font-size: 2.5rem;
 }
 #lower-menu-btns {
   margin-top: 1rem;
@@ -38,21 +50,35 @@ body {
 }
 .btn,
 #color-picker {
-  height: 150px;
-  width: 200px;
-  font-size: 2.5rem;
+  height: 100px;
+  width: 175px;
+  font-size: 2rem;
   border: 3px solid black;
   background-color: white;
 }
 #lower-menu-headline {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
-.btn:hover {
-  transform: scale(1.2);
-  font-size: 2.5rem;
+.clear-btn:hover {
+  transform: scale(1.1);
   color: white;
   background-color: black;
 }
 #color-picker:hover {
   transform: scale(1.2);
+}
+.rgb-btn:hover {
+  transform: scale(1.1);
+  font-size: 2.5rem;
+  color: white;
+  background: linear-gradient(
+    45deg,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
 }
