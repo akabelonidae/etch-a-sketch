@@ -73,6 +73,13 @@ rainbowBtn.addEventListener('click', function () {
   }
 });
 
+// Clear button
+document.querySelector('.clear-btn').addEventListener('click', function () {
+  const gridsAll = document.querySelectorAll('.newGrids');
+
+  gridsAll.forEach((grid) => (grid.style.backgroundColor = 'white'));
+});
+
 //
 createGrid(gridSlider.value);
 gridColor(colorPicker.value);
