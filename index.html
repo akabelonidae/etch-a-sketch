@@ -9,29 +9,34 @@
   </head>
   <body>
     <h1 id="title">Etch a sketch!</h1>
-
-    <div id="container">
+    <!-- Main container -->
+    <div id="main-container">
       <div id="sketch-main">
-        <div id="grid"></div>
+        <div id="main-grid"></div>
       </div>
     </div>
 
-    <!-- Grid slider -->
+    <!-- Lower menu -->
 
     <div id="lower-menu-main">
-      <div id="slider-div">
-        <div id="slider-text">16x16</div>
+      <div id="grid-slider-group">
+        <div id="grid-slider-text">16x16</div>
 
         <input type="range" id="grid-slider" min="16" max="64" value="16" />
       </div>
 
       <!-- Lower menu(buttons and color picker) -->
       <div id="lower-menu-group">
-        <div id="lower-menu-headline">Current Color:</div>
-        <input type="color" id="color-picker" />
-        <button class="btn clear-btn">Clear</button>
-        <button class="btn rgb-btn">Rainbow Mode Off!</button>
-        <button class="btn eraser-btn">Eraser</button>
+        <div id="color-picker-group">
+          <div id="lower-menu-headline">Current Color:</div>
+          <input type="color" id="color-picker" />
+        </div>
+
+        <div class="btn-group">
+          <button class="btn clear-btn">Clear</button>
+          <button class="btn rgb-btn">Rainbow Mode Off!</button>
+          <button class="btn eraser-btn">Eraser</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

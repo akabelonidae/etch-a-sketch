@@ -1,6 +1,6 @@
 'use strict';
 // Variables
-const grid = document.querySelector('#grid');
+const mainGrid = document.querySelector('#main-grid');
 const gridSlider = document.querySelector('#grid-slider');
 const colorPicker = document.querySelector('#color-picker');
 const rainbowBtn = document.querySelector('.rgb-btn');
@@ -13,7 +13,7 @@ const createGrid = function (gridCount) {
     newGridElements.classList.add('newGrids');
     newGridElements.style.height = `${700 / gridCount}px`;
     newGridElements.style.width = `${700 / gridCount}px`;
-    grid.appendChild(newGridElements);
+    mainGrid.appendChild(newGridElements);
   }
 };
 
