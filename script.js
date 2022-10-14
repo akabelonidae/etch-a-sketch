@@ -11,8 +11,8 @@ const createGrid = function (gridCount) {
   for (let i = 0; i < gridCount * gridCount; i++) {
     const newGridElements = document.createElement('div');
     newGridElements.classList.add('newGrids');
-    newGridElements.style.height = `${500 / gridCount}px`;
-    newGridElements.style.width = `${500 / gridCount}px`;
+    newGridElements.style.height = `${600 / gridCount}px`;
+    newGridElements.style.width = `${600 / gridCount}px`;
     mainGrid.appendChild(newGridElements);
   }
 };
