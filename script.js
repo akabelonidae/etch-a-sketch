@@ -77,6 +77,8 @@ document.querySelector('.clear-btn').addEventListener('click', function () {
 // Eraser button
 document.querySelector('.eraser-btn').addEventListener('click', function () {
   colorPicker.value = '#ffffff';
+  rainbowMode = 'off';
+  rainbowBtn.classList.remove('rainbowMode');
 });
 
 //

@@ -112,3 +112,7 @@ body {
     red
   );
 }
+
+#github-img {
+  height: 2rem;
+}
