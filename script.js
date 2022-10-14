@@ -11,8 +11,8 @@ const createGrid = function (gridCount) {
   for (let i = 0; i < gridCount * gridCount; i++) {
     const newGridElements = document.createElement('div');
     newGridElements.classList.add('newGrids');
-    newGridElements.style.height = `${700 / gridCount}px`;
-    newGridElements.style.width = `${700 / gridCount}px`;
+    newGridElements.style.height = `${500 / gridCount}px`;
+    newGridElements.style.width = `${500 / gridCount}px`;
     mainGrid.appendChild(newGridElements);
   }
 };
@@ -29,8 +29,8 @@ gridSlider.addEventListener('click', function () {
   paintGrid(colorPicker.value);
 
   document.querySelector(
-    '#slider-text'
-  ).textContent = `${gridSlider.value}x${gridSlider.value}`;
+    '#grid-slider-text'
+  ).textContent = `Current Size: ${gridSlider.value}x${gridSlider.value}`;
 });
 
 // Rainbow button
