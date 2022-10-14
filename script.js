@@ -4,9 +4,9 @@ const grid = document.querySelector('#grid');
 const gridSlider = document.querySelector('#grid-slider');
 const colorPicker = document.querySelector('#color-picker');
 const rainbowBtn = document.querySelector('.rgb-btn');
-let rainbowMode = 0;
+let rainbowMode = 'off';
 
-// Create grid elements
+// Create new grid elements
 const createGrid = function (gridCount) {
   for (let i = 0; i < gridCount * gridCount; i++) {
     const newGridElements = document.createElement('div');
@@ -19,62 +19,53 @@ const createGrid = function (gridCount) {
 
 // Grid x Grid slider
 gridSlider.addEventListener('click', function () {
-  rainbowMode = 0;
+  rainbowMode = 'off';
   rainbowBtn.classList.remove('rainbowMode');
 
   const gridsAll = document.querySelectorAll('.newGrids');
   gridsAll.forEach((div) => div.remove());
 
   createGrid(gridSlider.value);
-  gridColor(colorPicker.value);
+  paintGrid(colorPicker.value);
 
   document.querySelector(
     '#slider-text'
   ).textContent = `${gridSlider.value}x${gridSlider.value}`;
 });
 
-// Change grid color
-const gridColor = function () {
-  const gridsAll = document.querySelectorAll('.newGrids');
-
-  gridsAll.forEach((grid) =>
-    grid.addEventListener('mouseover', function () {
-      grid.style.backgroundColor = colorPicker.value;
-    })
-  );
-};
-
-// Rainbow effect
-const rainbowColors = function () {
-  const gridsAll = document.querySelectorAll('.newGrids');
-
-  gridsAll.forEach((grid) =>
-    grid.addEventListener('mouseover', function () {
-      const r = Math.floor(Math.random() * 256);
-      const g = Math.floor(Math.random() * 256);
-      const b = Math.floor(Math.random() * 256);
-      grid.style.backgroundColor = `rgb(${r},${g},${b})`;
-    })
-  );
-};
-
 // Rainbow button
 rainbowBtn.addEventListener('click', function () {
   // On
-  if (rainbowMode == 0) {
+  if (rainbowMode == 'off') {
     rainbowBtn.classList.add('rainbowMode');
     rainbowBtn.textContent = 'Rainbow Mode On!';
-    rainbowMode = 1;
-    rainbowColors();
+    rainbowMode = 'on';
 
     // Off
-  } else if (rainbowMode == 1) {
+  } else if (rainbowMode == 'on') {
     rainbowBtn.classList.remove('rainbowMode');
     rainbowBtn.textContent = 'Rainbow Mode Off!';
-    rainbowMode = 0;
-    gridColor(colorPicker.value);
+    rainbowMode = 'off';
   }
 });
+
+// Change grid color
+const paintGrid = function () {
+  const gridsAll = document.querySelectorAll('.newGrids');
+
+  gridsAll.forEach((grid) =>
+    grid.addEventListener('mouseover', function () {
+      if (rainbowMode == 'on') {
+        const r = Math.floor(Math.random() * 257);
+        const g = Math.floor(Math.random() * 257);
+        const b = Math.floor(Math.random() * 257);
+        grid.style.backgroundColor = `rgb(${r},${g},${b})`;
+      } else {
+        grid.style.backgroundColor = colorPicker.value;
+      }
+    })
+  );
+};
 
 // Clear button
 document.querySelector('.clear-btn').addEventListener('click', function () {
@@ -83,6 +74,11 @@ document.querySelector('.clear-btn').addEventListener('click', function () {
   gridsAll.forEach((grid) => (grid.style.backgroundColor = 'white'));
 });
 
+// Eraser button
+document.querySelector('.eraser-btn').addEventListener('click', function () {
+  colorPicker.value = '#ffffff';
+});
+
 //
 createGrid(gridSlider.value);
-gridColor(colorPicker.value);
+paintGrid(colorPicker.value);

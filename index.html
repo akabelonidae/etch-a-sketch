@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="container">
-      <h1 id="title">Etch a sketch!</h1>
-      <div id="grid"></div>
+    <h1 id="title">Etch a sketch!</h1>
 
-      <!-- Grid slider -->
+    <div id="container">
+      <div id="sketch-main">
+        <div id="grid"></div>
+      </div>
+    </div>
+
+    <!-- Grid slider -->
+
+    <div id="lower-menu-main">
       <div id="slider-div">
         <div id="slider-text">16x16</div>
 
@@ -20,13 +26,12 @@
       </div>
 
       <!-- Lower menu(buttons and color picker) -->
-      <div id="lower-menu-main">
+      <div id="lower-menu-group">
         <div id="lower-menu-headline">Current Color:</div>
-        <div id="lower-menu-btns">
-          <input type="color" id="color-picker" />
-          <button class="btn clear-btn">Clear</button>
-          <button class="btn rgb-btn">Rainbow Mode Off!</button>
-        </div>
+        <input type="color" id="color-picker" />
+        <button class="btn clear-btn">Clear</button>
+        <button class="btn rgb-btn">Rainbow Mode Off!</button>
+        <button class="btn eraser-btn">Eraser</button>
       </div>
     </div>
     <script src="script.js"></script>
